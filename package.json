@@ -1,0 +1,15 @@
+{
+  "name": "custom-sfcs",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "rollup -c --environment BUILD:production"
+  },
+  "devDependencies": {
+    "rollup": "^1.27.5",
+    "rollup-plugin-babel-minify": "^9.1.1",
+    "rollup-plugin-css-only": "^1.0.0",
+    "rollup-plugin-vue": "^5.1.4",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {}
+}
