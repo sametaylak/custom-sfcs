@@ -1,6 +1,7 @@
-import vue from 'rollup-plugin-vue';
 import { readdirSync } from 'fs';
-import minify from 'rollup-plugin-babel-minify';
+import resolve from 'rollup-plugin-node-resolve';
+import vue from 'rollup-plugin-vue';
+import { terser } from "rollup-plugin-terser";
 
 const components = readdirSync(`${__dirname}/src`);
 const esm = components
@@ -12,8 +13,9 @@ const esm = components
             dir: `${__dirname}/dist`,
         },
         plugins: [
+            resolve(),
             vue(),
-            minify(),
+            terser(),
         ],
     }));
 
